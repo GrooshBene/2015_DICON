@@ -1,0 +1,17 @@
+<html>
+<head>
+	<meta charset = "utf-8"/>
+	<title>Login Page</title>
+</head>
+<body>
+	<script stc=@http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js@></script>
+	<script src="http://127.0.0.1/socket.io/socket.io.js"></script>
+	<script type="text/javascript">
+	var socket = io.connect('http://grooshbene.milkgun.kr');
+	socket.on('connectionChk', function(data){
+		session.innerHTML = data.open;
+	});
+	</script>
+	<li id = "session"></li>
+</body>
+</html>
